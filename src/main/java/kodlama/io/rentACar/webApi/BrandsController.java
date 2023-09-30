@@ -3,6 +3,7 @@ package kodlama.io.rentACar.webApi;
 
 import java.util.List;
 
+import kodlama.io.rentACar.business.responses.GetAllBrandsResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +25,7 @@ public class BrandsController {
     }
 
     @GetMapping("/getall")
-    public List<Brand> getAll(){
+    public List<GetAllBrandsResponse> getAll(){
         return brandService.getAll();
     }
 
