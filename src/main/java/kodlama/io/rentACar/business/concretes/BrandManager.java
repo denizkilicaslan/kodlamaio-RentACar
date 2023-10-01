@@ -21,22 +21,21 @@ public class BrandManager implements BrandService {
 //    }
 
 
-
     @Override
-        public List<GetAllBrandsResponse> getAll() {
-            List<Brand> brands=  brandRepository.findAll();
-            List<GetAllBrandsResponse> responses=new ArrayList<>();
+    public List<GetAllBrandsResponse> getAll() {
+        List<Brand> brands = brandRepository.findAll();
+        List<GetAllBrandsResponse> responses = new ArrayList<>();
 
-            for (Brand brand:brands){
-                GetAllBrandsResponse responseItem=new GetAllBrandsResponse();
-                responseItem.setId(brand.getId());
-                responseItem.setName(brand.getName());
-                responses.add(responseItem);
-
-            }
-
-
-            return responses;
+        for (Brand brand : brands) {
+            GetAllBrandsResponse responseItem = new GetAllBrandsResponse();
+            responseItem.setId(brand.getId());
+            responseItem.setName(brand.getName());
+            responses.add(responseItem);
 
         }
+
+
+        return responses;
+
+    }
 }
